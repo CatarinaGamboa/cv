@@ -1,0 +1,21 @@
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+# latexmk
+*.bbl
+*.blg
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.fmt
+
+# Keep the compiled CV (main.pdf) tracked — remove the line below to ignore it
+# main.pdf

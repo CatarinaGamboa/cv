@@ -1,0 +1,307 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper, footskip=.5cm]{geometry}
+\usepackage{longtable}
+
+
+% \usepackage[a4paper,margin=1cm,footskip=.5cm]{geometry}
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+% \pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{plain}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+
+\simpleheader
+{headercolour}
+{\hspace*{5cm}Catarina}{Gamboa}
+{\hspace*{5cm}Software Engineering Ph.D. Student}
+{white}
+{\hspace*{5cm}
+    \infobubble{\faMapMarker}{cvgrey}{white}{Lisboa, Portugal}
+    \infobubble{\faHome}{cvgrey}{white}{Portuguese nationality}
+}
+{\hspace*{5cm}
+     \infobubble{\faEnvelopeO}{cvgrey}{white}{catarinavgamboa@gmail.com}
+
+    \infobubble{\faAt}{cvgrey}{white}{https://catarinagamboa.github.io/}
+}
+{
+\hspace*{5cm}
+\begin{minipage}[t]{0.7\textwidth}{
+% My interests include Design of {\color{cvred}Programming Languages} and {\color{cvred}Usable Software Verification}, so
+% that we can improve software reliability by joining Software Verification with Human Computer
+% Interaction techniques and make these tools useful to developers in their daily lives.
+\vspace{-0.2cm}
+\faBookmark~Software verification researcher specializing in developer experience and verification systems with publications in top-tier A* conferences and 9+ workshop papers.\\
+\faGears~Industry experience developing agentic workflows and static analysis tools at startup and enterprise environments.\\
+\faBook~Cross-institutional teaching of 150+ students across CMU and University of Lisbon.
+}
+\end{minipage}
+
+}
+
+%----- Image
+\vspace*{-1.2cm}
+\hspace*{-2cm}
+\roundpictwo[xshift=0.5cm,yshift=0cm]{7cm}{7cm}{gamboa.catarina1.jpeg}
+%----- Image
+
+
+
+% \vspace*{0.15cm}
+\small
+\sectionred{Education}
+
+\begin{longtable}{p{0.09\textwidth}| p{0.75\textwidth} c}
+    \cvevent{2021--NowA}{Dual PhD in Software Engineering}{Carnegie Mellon University and University of Lisbon}{Pittsburgh and Lisbon \color{cvred}}{I am enrolled in the Dual PhD CMU-Portugal completing courses and research at both CMU and U. Lisbon. Currently, and I'm currently working on improving the usability of liquid types for reliable software, 
+    advised by Alcides Fonseca and Jonathan Aldrich.}{cmu_pt.png} \\
+    
+    \cvevent{2019--2022}{Master Degree in Informatics Engineering - Software Engineering}{Faculdade de Ciências da Universidade de Lisboa}{Lisbon \color{cvred}}{GPA of 18/20. The courses included Software Design (18/20), Compiling Techniques (19/20), Software Reliability (18/20), and Software Verification and Validation (18/20). Final Dissertation on "LiquidJava: Extending Java with Refinements" advised by Alcides Fonseca and Chris Timperley.}{institution_logo.png}\\
+
+    % \cvevent{2016--2019, Portugal}{Undergraduate Studies in Informatics Engineering}{Faculdade de Ciências da Universidade de Lisboa}{Lisbon \color{cvred}}{GPA of 17/20. The courses included Algorithms and Data Structures (18/20), Principles of Programming (20/20), Construction of Sotware Systems (18/20), and Information Systems Analysis and Design (18/20).}{institution_logo.png}
+
+    
+\end{longtable}
+
+
+% \vspace*{0.05cm}
+\small
+\sectionred{Professional Experience}
+\begin{longtable}{p{0.09\textwidth}| p{0.85\textwidth}}
+        \cveventmed{July-Oct 2025}{Software Engineer PhD Intern}{Uber, Amsterdam, Netherlands}{Designed and implemented agentic workflows using LLMs and custom MCP tools to automate Python library migrations for enterprise development teams.}\\
+     \cveventmed{May-Aug 2024}{Software Engineer Research Intern}{Gitar.co, San Mateo, CA, USA}{During this summer internship, I helped improve the static analysis tools across different programming languages, especially in the creation of def-use chains, and I contributed to the testing framework using fuzzing and applying the tool to open-source projects. I had the pleasure to work in the PL team with Raj Barik, Ameya Ketkar, Lazaro Clapp and Ali-Reza Adl-Tabatabai.}\\
+    % \cveventmed{2020-Now}{Researcher at LASIGE and S3D}{University of Lisbon and Carnegie Mellon University}{I started doing research at LASIGE during my master thesis and I am currently a researcher at both LASIGE and the Software and Societal Systems Department (S3D) at CMU.}\\
+    \cveventmed{2020 -2025}{Teaching Assistant at CMU and U. Lisbon}{Carnegie Mellon University and University of Lisbon}{I was a T.A. for courses at both Carnegie Mellon and the University of Lisbon. At CMU I taught the course of API Design, working with Joshua Bloch on the best practices to design good APIs. During the course we focused on Java examples but explored other languages such as C and Rust. In Lisbon, I taught introductory courses on Programming to more than 100 undergraduate students of Information Technology, Mathematics, Physics and others.}
+    % \cveventmed{Jul 2019, Portugal}{Summer Internship}{Runtime Revolution}{I had a summer internship in a company of software development, developing a project using Ruby on Rails and React.}
+\end{longtable}
+
+
+
+
+% \vspace*{0.00cm}
+\small
+\sectionred{Publications}
+\subsection*{Full Papers}
+\begin{longtable}{p{0.09\textwidth}| p{0.85\textwidth}}
+    \cveventpaper{June 2025}{Usability Barriers for Liquid Types}{Catarina Gamboa, Abigail Reese, Alcides Fonseca, and Jonathan Aldrich.}{https://dl.acm.org/doi/10.1145/3729327}{PLDI 2025 - Conference on Programming Language Design and Implementation, CORE A*. - We conducted an empirical research study analyzing usability challenges and users' barriers to using liquid type systems. We identified three main categories that can inform theoretical and practical advances in verification-based type system design.} \\
+    \cveventpaper{May 2023}{Usability-Oriented Design of Liquid Types for Java}{Catarina Gamboa, Paulo Santos, Christopher S. Timperley, and Alcides Fonseca.}{https://ieeexplore.ieee.org/document/10172818}{ICSE 2023 - IEEE/ACM 45th International Conference on Software Engineering (ICSE), CORE A*. - We designed and evaluated LiquidJava, a human-centered extension of Java’s type system using Liquid Types, we showed the improvement of bug detection and developer experience through participatory design and user studies.}
+\end{longtable}
+
+\vspace*{0.05cm}
+\subsection*{Short Papers, Posters and Demos}
+\begin{longtable}{p{0.09\textwidth}| p{0.85\textwidth}}
+    \cveventpaper{Dec 2024}{Are large language models memorizing bug benchmarks?}{Daniel Ramos, Claudia Mamede, Kush Jain, Paulo Canelas, \underline{Catarina Gamboa}, Claire Le Goues}{https://arxiv.org/pdf/2411.13323}{Paper Accepted at LLM4Code'25 - This project examines data leakage in bug benchmarks for LLMs  used for software engineering tasks, revealing memorization in some smaller models and stressing the need for better evaluation methods.}\\
+    \cveventpaper{Oct 2023}{Latte: Lightweight Aliasing Tracking for Java}{Conrad Zimmerman, \underline{Catarina Gamboa}, Alcides Fonseca, Jonathan Aldrich}{https://arxiv.org/abs/2309.05637}{IWACO'23 and HATRA'23 @ SPLASH'23- We developed and formalized a lightweight aliasing and uniqueness tracking system that minimizes annotations while supporting common features in object-oriented languages such as Java.}\\
+    \cveventpaper{Oct 2022}{Poster - LiquidJava: Improving the Usability of Liquid Types for Reliable Software}{\underline{Catarina Gamboa}, Alcides Fonseca, and Jonathan Aldrich}{https://catarinagamboa.github.io/papers/cylab22-poster.pdf}{2022 CyLab Partners Conference, at Carnegie Mellon University, Pittsburgh - I presented an overview of my PhD projects.}\\
+    \cveventlink{Mar 2022}{DEMO - Dive into LiquidJava - Extending Java with Liquid Types}{\underline{Catarina Gamboa}, Paulo Santos, Christopher S. Timperley, and Alcides Fonseca.}{https://2022.programming-conference.org/track/programming-2022-posters-demos}{Posters and Demonstrations track at <Programming> 2022 - I demonstrated how LiquidJava can be integrated in Visual Studio Code and used to verify Java programs that have Liquid Types or use libraries that are annotated with Liquid Types.}\\
+    \cveventlink{Jan 2022}{Understandable and Useful Error Messages for Liquid Types}{Alcides Fonseca, \underline{Catarina Gamboa}, João David, Guilherme Espada, Paulo Canelas}{https://popl22.sigplan.org/home/wits-2022}{ WITS'22 @ POPL'22 - We presented insights on the difficulties of handling error messages in languages with Liquid Types, drawing from experience with Aeon, LiquidJava, and MLVP, and connecting lessons to  theorem provers like Coq and Lean.}\\
+    \cveventlink{Oct 2021}{User-driven design and evaluation of Liquid Types in Java}{\underline{Catarina Gamboa}, Paulo Santos, Christopher S. Timperley, and Alcides Fonseca}{https://2021.splashcon.org/home/hatra-2021}{HATRA'21 @ SPLASH'21 - Presented the initial design of LiquidJava and validated it through developer surveys and a user study showing increased efficiency and adoption intent.}\\
+    \cveventpaper{Sep 2021}{LiquidJava: Adding Lightweight Verification to Java}{\underline{Catarina Gamboa}, Paulo Santos, Christopher S. Timperley, and Alcides Fonseca}{https://catarinagamboa.github.io/papers/INFORUM21-extended_abstract.pdf}{INForum 2021 - Informatics Symposium.}\\
+    \cveventlink{Nov 2020}{Extending Java with Refinements}{\underline{Catarina Gamboa}, Paulo Santos, Christopher S. Timperley, and Alcides Fonseca}{https://persons.iis.nsk.su/files/persons/pages/programmewithpresentandvideopssv20_0.pdf}{PSSV'20 - Program Semantics, Specification and Verification: Theory and Applications, Student Paper}
+\end{longtable}
+
+\vspace*{-0.2cm}
+\small
+\sectionred{Invited Talks}
+\begin{longtable}{p{0.09\textwidth}| p{0.85\textwidth}}
+    \cveventmed{Jan 2025}{Talk @ PL@LX}{University of Lisbon}{Shared my recently submitted work to a community of scholars in Lisbon that are interested in Programming Languages research.}\\
+    \cveventmed{Oct 2024}{Guest Lecture @ Quality Assurance course}{Carnegie Mellon University}{Chris Timperley invited me to give a guest lecture about static analysis, liquid types and LiquidJava in the course of Quality Assurance. The lecture counted with more than 50 students all enrolled in the Masters in Software Engineering at CMU. }\\
+    \cveventmed{Oct 2024}{Talk @ RSS Meetup}{University of Lisbon}{I was invited to share my internship experience during the summer of 2024, showcasing what I learned about how research can lead to successful startups and how to add a business perspective to research in programming languages. }\\
+    \cveventmed{Oct 2024}{Talk @ Lasige Welcome Day - Into the Unknown: Journey from LASIGE to CMU and Silicon Valley Startups
+}{University of Lisbon}{I was invited to share my experience of going to CMU and having a Summer internship in Sillicon Valley, my approach was to give incentive to other students to aim high and not be afraid to go after international opportunities, and to bring to the University of Lisbon some of the practices I enjoyed having at CMU. This talk counted with Master and PhD students, as well as faculty members, with more the 100 people in the audience. }\\
+    \cveventmed{Dec 2022}{Guest Lecture @ Secure Coding class}{Carnegie Mellon University}{I was invited by Hanan Hibshi to give a talk about LiquidJava in the course of Secure Coding, 14735 during the Fall of 2022. This talk highlighted how type systems can be leveraged to improve code reliability and help developers find bugs at compile-time.}\\
+    \cveventlink{Jul 2022}{Talk @ Lasige Forum - Science Communication and the Media}{LASIGE, Faculdade de Ciências da Universidade de Lisboa}{https://www.youtube.com/watch?v=HLhAqPvQFsI}{Presentation about the importance of Science Communication to broad audiences using media resources. Short version presented at the \href{https://www.lasige.pt/1st-lasige-forum/}{1st LASIGE FORUM} and a full-version presented in \href{https://www.lasige.pt/talk/talks-lasige-catarina-gamboa/}{Talks@LASIGE}.}
+\end{longtable}
+
+
+% \vspace*{-0.2cm}
+% \small
+% \sectionred{Ongoing Projects}
+% \begin{longtable}{p{0.09\textwidth}| p{0.85\textwidth}}
+%     \cveventshortdesc{July 2023 - now}{Understanding the usability barriers in Liquid Types}
+%     {Liquid Types improve software reliability by finding bugs at compile-time as it has been shown in many papers. However, they are yet to be widely used. Therefore, this project aims to investigate what are the usability issues and improvements that can make liquid types more widely used by applying exploratory qualitative techniques (e.g., contextual inquiries, interviews, usability studies).}\\
+%     \cveventshortdesc{July 2023 - now}{LiquidJava - Formalization of Liquid Types in Java}{After designing LiquidJava with a focus on usability, this project aims to formalize the language and the interesting properties of integrating liquid types in Java. The first step was accomplished by adding a lightweight aliasing tracking technique in Java (Latte) that will be leveraged to reason about strong updates where liquid types are present. }
+% \end{longtable}
+
+
+\vspace*{0cm}
+\small
+\sectionred{Conference Committees}
+\begin{longtable}{p{0.09\textwidth}| p{0.85\textwidth} }
+    \cveventmed{2023/2024}{SPLASH'23 and '24 - Volunteer Co-Chair \href{https://2023.splashcon.org/committee/splash-2023-organizing-committee}{\textit{(website)}}}
+    {Cascais, Portugal and Pasadena, USA}{I was part of the organizing committee of SPLASH for two consecutive years, co-chairing the volunteering teams of around 50 volunteers. My responsibilities included managing schedules, assigning tasks, troubleshooting logistics, and fostering a welcoming and professional environment for more than 500 conference attendees.}\\
+     \cveventmed{2023}{PLDI'23 - Artifact Evaluation Committee \href{https://pldi23.sigplan.org/committee/pldi-2023-pldi-research-artifacts-artifact-evaluation-committee}{\textit{(website)}}}{Orlando, USA}
+     {I participated in the artifact evaluation committee of PLDI'23 and reviewed 3 different projects that accompanied the main conference accepted papers.}\\
+     
+\end{longtable}
+
+\vspace*{0.05cm}
+\small
+\sectionred{Outreach, Leadership and Teamwork}
+\begin{longtable}{p{0.09\textwidth}| p{0.85\textwidth} }
+    \cveventmed{May 2023}{Student Volunteer at ICSE 2023, and 2024}{Melbourne, Australia, and Lisbon, Portugal}
+    {I participated as a student volunteer in the organization of the conferences that counted with around 1500 participants.}\\
+    \cveventshortdesc{2021-2023}{Student Volunteer at POPL 2021, 2022 and 2023 }
+    {I participated as a student volunteer in three consecutive years helping in the organization of the event in online, hybrid and in-person versions.}\\
+    \cveventshortdesc{2021-2022}{Co-organization of events at LASIGE}
+    {I joined the organization committee for the LASIGE Welcome Day 2021 and 2022, organized team building activities such as paintball and movie nights for all members of the research unit, joined the PhD student commission to help improve the well-being and connection among PhD students.}\\
+    \cveventshortdesc{2019-2022}{Board Member of the non-profit cultural organization Associação Alegres Olhares}
+    {I was an elected board member of the non-profit cultural association Alegres Olhares in the last two elections for the corporate entities. The association organizes and co-organizes cultural projects using creativity to take the traditional projects to our present day.}\\
+    \cveventshortdesc{2010-now}{Participation in Music and Theater Groups}
+    {I play the concert flute in several music groups including the Band of the Phillarminic Society of Olhalvo and the portuguese folk music group Noses com Vozes. I also participated in multiple theater groups such as the Academic Theater of the University of Lisbon (TUT) and the SCS Musical group at CMU.}
+\end{longtable}
+
+
+\vspace*{0cm}
+\small
+\sectionred{Awards}
+\begin{longtable}{p{0.09\textwidth}| p{0.85\textwidth}}
+    \cveventshortdesc{Apr 2022}{Huawei Scholarship}
+    {I was awarded with one of the 50 scholarships given in the scope of Huawei's program Seeds For The Future 2.0, in collaboration with .PT, to empower students in the STEM areas.}\\
+    \cveventshortdesc{Sep 2021}{Award for Best Student Poster}
+    {I received the award for best poster for the work on "LiquidJava: Adding Lightweight Verification to Java" in the conference INFORUM - Informatics Symposium 2021.}\\
+    \cveventshortdesc{2021}{MaxData Award - Informatics Excellence}
+    {I received the academic excellence award for the best student on the first year of the MSc on Informatics Engineering.}\\
+    \cveventshortdesc{2018-2020}{Diploma of Academic Merit}
+    {I received academic excellence awards for the three years of the Bachelor degree.}\\
+\end{longtable}
+
+
+\vspace*{0cm}
+\small
+\sectionred{Other Education}
+\begin{longtable}{p{0.09\textwidth}| p{0.85\textwidth} }
+    \cveventlink{Apr 2022}{Science and the Media - bringing scientists, journalists and society}{cE3c, Faculdade de Ciencias da Universidade de Lisboa}{https://ce3c.ciencias.ulisboa.pt/training/ver.php?id=187}{}\\
+    \cveventshortdesc{}{2nd Grade on Concert Flute}{I had concert flute classes since the age of 6, and in 2014 got the 2nd grade of transverse flute by the Torres Vedras Conservatory.}\\
+    \cveventshortdesc{}{6th Grade on Classical Dance}{I attended classes of classical dance from 2006 to 2015, and achieved the 3rd Level of the "Certificate in Graded Examination in Dance" by Royal Academy of Dance, for the 6th grade of classical dance.}
+\end{longtable}
+
+\small
+\sectionred{Other Activities}
+\begin{longtable}{p{0.09\textwidth}| p{0.85\textwidth}}
+    \cveventmed{2022, 2018}{Monitor at Verão ULisboa and Ciências Open Day}{Faculdade de Ciências da Universidade de Lisboa}
+    {I helped in activities to promote Programming and Computer Science for high school students.}\\
+    \cveventmed{Jan 2019}{Volunteer in the event Building the Future}{Microsoft and imatch}
+    {I participated as volunteer on the organization of the event Building the Future which joined technology, transformation and leadership to empower people and companies. The event was promoted by Microsoft in collaboration with imatch.}\\
+    \cveventmed{Jul 2017}{Summer Course on Heritage and Creativity}{Instituto Politécnico de Leiria}
+    {I participation on the International Summer Course about Heritage and Creativity.}
+\end{longtable}
+
+
+% \sectionred{Overall Experience Timeline}
+
+% \begin{longtable}{p{0.3\textwidth}| p{0.6\textwidth}}
+%     \cveventmed{Aug 2024 - Currently, Lisbon, Portugal}{[Back in Portugal] Dual PhD in Software Engineering}{Carnegie Mellon University and University of Lisbon}
+%     {Published 2 papers in top tier A* conferences - ICSE and PLDI as first author, and has 7+ short papers and posters presented in workshops. The research area is related to Programming Languages and Usable Software Verification.}\\
+%     \cveventmed{Jan-Jun 2025, Lisbon, Portugal}{Invited Teaching Assistant}{University of Lisbon}
+%     {Teaching 150+ undergraduate students in the course Algorithms and Data Structures.}\\
+%     \cveventmed{Aug 2022 - Aug 2024, Pittsburgh, USA}{[Study in USA] Dual PhD in Software Engineering}{Carnegie Mellon University and University of Lisbon}
+%     {Studied in the USA for a two year period, before returning to Portugal.}\\
+%     \cveventmed{May-Aug 2024, San Mateo, USA}{Software Engineer Research Intern}{Gitar.co}
+%     {Developing program analysis mechanisms for automatic program transformation.}\\
+%     \cveventmed{Oct-Dec 2023, Pittsburgh, USA}{Teaching Assistant}{Carnegie Mellon University}
+%     {Teaching the course of API Design}\\
+%     \cveventmed{Aug 2022 - now, Lisbon, Portugal and Pittsburgh, USA}{[Start program] Dual PhD in Software Engineering}{Carnegie Mellon University and University of Lisbon}{Got a scholarship from CMU-Portugal and the PhD in Computer Science continued with a specialization in Software Engineering.}\\
+%     \cveventmed{Sep 2021 - now, Lisbon, Portugal}{[Start] PhD in Computer Science}{University of Lisbon}{}\\
+%     \cveventmed{Sep 2019 - Jan 2022, Lisbon, Portugal}{Masters in Informatics Engineering}{University of Lisbon}{Working with Programming Languages, Type Systems and Usability for developers.}\\
+%     \cveventmed{Sep 2019 - June 2020, Lisbon, Portugal}{Teaching Assistant}{University of Lisbon}{Teaching two courses on Programming fundamentals to 100+ students.}\\
+%     \cveventmed{Jul 2019, Lisbon, Portugal}{Summer Internship}{Runtime Revolution}{Short experience working as a full stack intern.}\\
+%     \cveventmed{Sep 2016 - Aug 2019 , Portugal}{Undergraduate Studies in Informatics Engineering }{University of Lisbon}{}\\
+%     \cveventmed{Before Sep 2016, Lisbon, Portugal}{High School and Elementary School in Portugal}{}{}\\
+% \end{longtable}
+
+
+% \begin{minipage}[t]{0.35\textwidth}
+% \section*{Degrees}
+% \begin{tabular}{r p{0.6\textwidth} c}
+%     \cvdegree{1710}{Captain}{Certified}{Tortuga Uni \color{headerblue}}{}{disney.png} \\
+%     \cvdegree{1715}{Bucaneering}{M.A.}{London \color{headerblue}}{}{medal.jpeg} \\
+%     \cvdegree{1720}{Bucaneering}{B.A.}{London \color{headerblue}}{}{medal.jpeg}
+% \end{tabular}
+% \end{minipage}\hfill
+% \begin{minipage}[t]{0.3\textwidth}
+% \section*{Programming}
+% \begin{tabular}{r @{\hspace{0.5em}}l}
+%      \bg{skilllabelcolour}{iconcolour}{html, css} &  \barrule{0.4}{0.5em}{cvpurple}\\
+%      \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.55}{0.5em}{cvgreen} \\
+%      \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.5}{0.5em}{cvpurple} \\
+%      \bg{skilllabelcolour}{iconcolour}{R} & \barrule{0.25}{0.5em}{cvpurple} \\
+%      \bg{skilllabelcolour}{iconcolour}{javascript} & \barrule{0.1}{0.5em}{cvpurple} \\
+% \end{tabular}
+% \end{minipage}
+
+% \section*{Curriculum}
+% \begin{tabular}{r| p{0.5\textwidth} c}
+%     \cvevent{2018--2021}{Captain of the Black Pearl}{Lead}{East Indies \color{cvred}}{Finally got the goddamn ship back. \lorem}{disney.png} \\
+%     \cvevent{2019}{Freelance Pirate}{Bucaneering}{Tortuga \color{cvred}}{This and that. The usual, aye?  \lorem}{medal.jpeg} \\
+% \end{tabular}
+% \vspace{3em}
+
+% \begin{minipage}[t]{0.3\textwidth}
+% \section*{Certificates \& Grants}
+% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+%     1708 & Captain's Certificates \\
+%     1710 & Travel grant \\
+%     1715--1716 & Grant from the Pirate's Company
+% \end{tabular}
+% \bigskip
+
+
+
+% \end{minipage}\hfill
+% \begin{minipage}[t]{0.3\textwidth}
+% \section*{Publications}
+% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+%     1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
+%     1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720).
+% \end{tabular}
+% \bigskip
+
+% \section*{Talks}
+% \begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+%     Nov. 1726 & ``How I lost my ship (\& and how to get it back)'', at: \emph{Annual Pirate's Conference} in Tortuga, Nov. 1726.
+% \end{tabular}
+% \end{minipage}
+
+
+
+\vfill{} % Whitespace before final footer
+
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+% \setlength{\parindent}{0pt}
+% \begin{minipage}[t]{\rightcolwidth}
+% \begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+% {\small Jack Sparrow \icon{\faEnvelopeO}{cvgreen}{} The Black Pearl \icon{\faMapMarker}{cvgreen}{} Tortuga \icon{\faPhone}{cvgreen}{} 0099/333 5647380 \newline\icon{\faAt}{cvgreen}{} \protect\url{cgamboa@andrew.cmu.edu}
+% }
+% \end{center}
+% \end{minipage}
+
+
+\end{document}
