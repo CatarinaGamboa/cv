@@ -19,3 +19,6 @@
 
 # Keep the compiled CV (main.pdf) tracked — remove the line below to ignore it
 # main.pdf
+
+# Relocation/visa CV — contains personal data (home & current addresses); never commit
+cv-relocation.*
